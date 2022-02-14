@@ -3,11 +3,36 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <style>
-            body {
-                background: red;
+            html, body {
+                background:white;
                 height: 5000px;
-                background: url(./bg.jpg) repeat-y;
+                width: 100%;
                 background-size: auto;
+                padding: 0;
+                margin: 0;
+                overflow-x: hidden;
+            }
+
+            #topnav {
+                width: 100%;
+                margin-top: -1px;
+                position: relative;
+                border-bottom: 1px solid #f1f1f1;
+            }
+
+            #pills {
+                margin-top: 16px;
+                margin-left: 24px;
+                width: 435px;
+            }
+
+            #pages {
+                width: 327px;
+                margin: 0 auto;
+                position: relative; 
+                left: 50%;
+                transform: translateX(-50%);
+                margin-top: 16px;
             }
 
             .navigation {
@@ -37,9 +62,11 @@
         </style>
     </head>
     <body>
-        
+        <img id="topnav" src="./topnav.png" alt="">
+        <img id="pills" src="./pills.png" alt="">
+        <img id="pages" src="./pages.png" alt="">
         <div class="navigation">
             <img src="./nav.png" alt="">
         </div>
     </body>
-</html>
+</html  
