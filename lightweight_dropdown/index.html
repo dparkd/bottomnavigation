@@ -1,0 +1,91 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <style>
+            html, body {
+                background:white;
+                height: 5000px;
+                width: 100%;
+                background-size: auto;
+                padding: 0;
+                margin: 0;
+                overflow-x: hidden;
+            }
+
+            #topnav {
+                width: 325px;
+                margin-top: 24px;
+                position: relative;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            #pills {
+                margin-top: 16px;
+                margin-left: 24px;
+                width: 435px;
+            }
+
+            #pages {
+                width: 327px;
+                margin: 0 auto;
+                position: relative; 
+                left: 50%;
+                transform: translateX(-50%);
+                margin-top: 16px;
+            }
+
+            #menu {
+                width: 100%;
+                position: fixed; 
+                opacity: 1;
+                top: -400px; 
+                left: 0;
+                pointer-events: none;
+                transition: all 0.2s ease-out;
+                z-index: 2;
+            }
+
+            #scrim {
+                position: fixed;
+                background: black; 
+                width: 100%;
+                height: 4000px;
+                pointer-events: none;
+                opacity: 0;
+                top: 0; 
+                left: 0;
+                z-index: 1;
+                transition: all 0.2s ease-out;
+            }
+
+        </style>
+    </head>
+    <body>
+        <img id="topnav" src="./header.png" alt="">
+        <img id="pills" src="./pills.png" alt="">
+        <img id="pages" src="./pages.png" alt="">
+
+        <div id="scrim"><p>d</p></div>
+        <img id="menu" src="./menu2.png" alt="">
+
+        <script>
+            var topnav = document.getElementById("topnav");
+            var menu = document.getElementById("menu");
+            var scrim = document.getElementById("scrim");
+
+            topnav.addEventListener('click', function() {
+                scrim.style.opacity = 0.5;
+                menu.style.top = 0;
+                menu.style.pointerEvents = "auto";
+            }); 
+
+            menu.addEventListener('click', function() {
+                scrim.style.opacity = 0;
+                menu.style.top = '-400px';
+                menu.style.pointerEvents = 'none';
+            })
+        </script>
+    </body>
+</html  

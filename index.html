@@ -5,68 +5,46 @@
         <style>
             html, body {
                 background:white;
-                height: 5000px;
                 width: 100%;
-                background-size: auto;
+                background: url('./joe.jpg');
+                background-size: cover;
                 padding: 0;
                 margin: 0;
                 overflow-x: hidden;
+                font-family: monospace;
             }
 
-            #topnav {
-                width: 100%;
-                margin-top: -1px;
-                position: relative;
-                border-bottom: 1px solid #f1f1f1;
-            }
-
-            #pills {
-                margin-top: 16px;
-                margin-left: 24px;
-                width: 435px;
-            }
-
-            #pages {
-                width: 327px;
-                margin: 0 auto;
-                position: relative; 
-                left: 50%;
-                transform: translateX(-50%);
-                margin-top: 16px;
-            }
-
-            .navigation {
-                width: 354px;
-                height: 56px;
-                background: white;
-                left: 50%; 
-                transform: translateX(-50%);
-                margin-bottom: 20px;
-                border-radius: 100px;
-                -webkit-box-shadow: 0px 0px 29px 0px rgba(0,0,0,0.3); 
-                box-shadow: 0px 0px 29px 0px rgba(0,0,0,0.3);
-
+            ul {
                 position: fixed; 
-                bottom: env(safe-area-inset-bottom);
-            }
-
-            .navigation img {
-                width: 334px;
-                height: 36px;
-                margin: 0 auto;
-                position: absolute;
-                left: 50%;
+                left: 48%; 
                 top: 50%;
                 transform: translate(-50%, -50%);
+                color: white; 
+                list-style: none;
+            }
+
+            ul li {
+                padding-bottom: 20px;
+            }
+            
+            ul li a{
+                color: white;
+                font-size: 20px;
+            }
+
+            ul li a:visited {
+                color: white;
             }
         </style>
     </head>
     <body>
-        <img id="topnav" src="./topnav.png" alt="">
-        <img id="pills" src="./pills.png" alt="">
-        <img id="pages" src="./pages.png" alt="">
-        <div class="navigation">
-            <img src="./nav.png" alt="">
-        </div>
+        <ul>
+            <li><a href="./lightweight_dropdown">lightweightdropdown</a></li>
+            <li><a href="./bottom_dashboard">bottomdashboard</a></li>
+            <li><a href="./grandcentralterminal/">grandcentralterminal</a></li>
+            <li><a href="./bottom_nav_text/">bottomnavtext</a></li>
+            <li><a href="./top_nav_text/">topnavtext</a></li>
+            <li><a href="./floating_dashboard_icons/">floatingdashboardicons</a></li>
+        </ul>
     </body>
 </html  

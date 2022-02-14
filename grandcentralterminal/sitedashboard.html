@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <style>
+            html, body {
+                background:white;
+                height: 5000px;
+                width: 100%;
+                background-size: auto;
+                padding: 0;
+                margin: 0;
+                overflow-x: hidden;
+                overflow-y: hidden;
+            }
+
+            #user {
+                width: 100%;
+                position: fixed;
+                top: -50px;
+            }
+
+
+            #menu {
+                width: 100%;
+                position: fixed; 
+                opacity: 1;
+                bottom: -2400px; 
+                left: 0;
+                pointer-events: none;
+                transition: all 0.2s ease-out;
+                z-index: 2;
+            }
+
+
+        </style>
+    </head>
+    <body>
+        <img id="user" src="./sitedashboard.jpg" alt="">
+        <img src="./designmenu.png" id="menu" alt="">
+
+        <script>
+            var user = document.getElementById("user");
+            var menu = document.getElementById("menu");
+
+            user.addEventListener('click', function() {
+                menu.style.bottom = '-300px';
+                menu.style.pointerEvents = "auto";
+            }); 
+
+            menu.addEventListener('click', function() {
+                menu.style.bottom = '-2400px';
+                menu.style.pointerEvents = 'none';
+            })
+        </script>
+    </body>
+</html  
